@@ -1,0 +1,39 @@
+<!--
+  ~ Copyright (c) 2015-present, Parse, LLC.
+  ~ All rights reserved.
+  ~
+  ~ This source code is licensed under the BSD-style license found in the
+  ~ LICENSE file in the root directory of this source tree. An additional grant
+  ~ of patent rights can be found in the PATENTS file in the same directory.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Header is above ListView -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/abc_search_url_text_normal"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/push_notifications_title"
+        android:textColor="@color/background_material_light"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+
+    <fragment
+        android:id="@+id/push_fragment"
+        android:name="com.folio3.parse.PushFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_weight="1" />
+
+</RelativeLayout>
