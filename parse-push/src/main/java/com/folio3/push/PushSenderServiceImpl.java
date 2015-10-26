@@ -46,8 +46,6 @@ public class PushSenderServiceImpl implements PushSenderService {
     @Value("${" + PARSE_PUSH_URL + "}")
     private String parsePushURL;
     
-    private Properties properties;
-    
     private HttpURLConnection configure(String requestMethod, URL url) {
     	
     	LOG.info("[+] Configuring Parse server parameters");
@@ -128,14 +126,4 @@ public class PushSenderServiceImpl implements PushSenderService {
         } 
         return pushResponse;
     }
-    
-    public Properties getProperties() {
-        return properties;
-    }
-
-    public void setProperties(Properties properties) {
-        this.properties = properties;
-    }
-
-	
 }
